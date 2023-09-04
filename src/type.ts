@@ -3,16 +3,16 @@ import { AnyAction } from 'redux';
 
 export type ExpensesData = {
   ask: string;
-  // bid: string;
+  bid: string;
   code: string;
-  // codein: string;
-  // create_date: string;
-  // high: string;
-  // low: string;
-  // name: string;
-  // pctChange: string;
-  // timestamp: string;
-  // varBid: string;
+  codein: string;
+  create_date: string;
+  high: string;
+  low: string;
+  name: string;
+  pctChange: string;
+  timestamp: string;
+  varBid: string;
 };
 
 export type UserState = {
