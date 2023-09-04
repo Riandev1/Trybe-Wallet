@@ -1,5 +1,5 @@
 import { AnyAction } from 'redux';
-import { USER_LOGIN } from '../actions';
+import { LOGIN_DATA } from '../actions';
 
 const INITIAL_STATE = {
   user: {
@@ -8,13 +8,16 @@ const INITIAL_STATE = {
   },
 };
 
-const personalData = (state = INITIAL_STATE, action: AnyAction) => {
+function user(state = INITIAL_STATE, action: AnyAction) {
   switch (action.type) {
-    case USER_LOGIN:
-      return action.payload;
+    case LOGIN_DATA:
+      return {
+        ...state,
+        ...action.payload,
+      };
     default:
       return state;
   }
-};
+}
 
-export default personalData;
+export default user;

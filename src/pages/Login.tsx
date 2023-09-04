@@ -1,73 +1,65 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { userLogin } from '../redux/actions';
+import { salveLogin } from '../redux/actions';
+import { UserState } from '../type';
+
+const loginData = {
+  email: '',
+  password: '',
+};
 
 function Login() {
-  const [form, setForm] = useState({
-    email: '',
-    password: '',
-  });
-  const { email, password } = form;
+  const [login, setLogin] = useState<UserState>(loginData);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const validateInfo = (validateEmail: string, validatePassword: string) => {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const testEmail = emailRegex.test(validateEmail);
-    const testPassword = validatePassword.length >= 6;
-    return testEmail && testPassword;
-  };
-
-  const isDisable = validateInfo(email, password);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setForm({
-      ...form,
+  const { email, password } = login;
+  const navigate = useNavigate();
+  function handleChange({ target }: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = target;
+    setLogin({
+      ...login,
       [name]: value,
     });
-  };
-
-  const handleClick = () => {
-    dispatch(userLogin(form));
-    setForm({
-      email: '',
-      password: '',
-    });
+  }
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    dispatch(salveLogin(login));
     navigate('/carteira');
-  };
+  }
 
   return (
-    <form>
-      <img src="" alt="" />
-      <label htmlFor="email">
-        <input
-          onChange={ (event) => handleChange(event) }
-          value={ email }
-          name="email"
-          type="email"
-          placeholder="Email"
-          data-testid="email-input"
-        />
-        <input
-          onChange={ (event) => handleChange(event) }
-          value={ password }
-          name="password"
-          type="password"
-          placeholder="Password"
-          data-testid="password-input"
-        />
-      </label>
-      <button
-        onClick={ handleClick }
-        disabled={ !isDisable }
-        type="button"
-      >
-        Entrar
-      </button>
-    </form>
+    <>
+      <h1>TrybeWallet</h1>
+      <form onSubmit={ handleSubmit }>
+        <label>
+          E-mail:
+          {' '}
+          <input
+            data-testid="email-input"
+            type="email"
+            name="email"
+            value={ email }
+            required
+            onChange={ handleChange }
+          />
+        </label>
+        <label>
+          Senha:
+          {' '}
+          <input
+            data-testid="password-input"
+            name="password"
+            value={ password }
+            type="password"
+            required
+            onChange={ handleChange }
+          />
+        </label>
+        <button disabled={ !(password.length >= 6 && /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i.test(email)) }>Entrar</button>
+      </form>
+    </>
   );
 }
 
