@@ -52,7 +52,7 @@ function WalletForm() {
           onChange={ handleChange }
         />
       </label>
-      <span> Moedas: </span>
+      <span> Moeda: </span>
       <select
         name="currency"
         value={ currency }
@@ -63,14 +63,14 @@ function WalletForm() {
           <option key={ cur }>{cur}</option>
         ))}
       </select>
-      <span> Método de Pagamentos: </span>
+      <span> Método de Pagamento: </span>
       <select
         name="method"
         value={ method }
         data-testid="method-input"
         onChange={ handleChange }
       >
-        <option value="Dinheiro">Dinheiro ou Pix</option>
+        <option value="Dinheiro">Dinheiro</option>
         <option value="Cartão de crédito">Cartão de crédito</option>
         <option value="Cartão de débito">Cartão de débito</option>
       </select>
