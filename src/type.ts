@@ -31,6 +31,7 @@ export type WalletState = {
     description: string;
     exchangeRates: [{
       ask: number;
+      name: string;
     }];
   }],
   editor: boolean;
@@ -40,4 +41,14 @@ export type ReduxState = {
   user: UserState,
   wallet: WalletState,
 };
+
+export type RenderExpenses = {
+  id: number,
+  value: number;
+  currency: number;
+  method: string;
+  tag: string;
+  description: string;
+};
+
 export type Dispatch = ThunkDispatch<ReduxState, null, AnyAction>;

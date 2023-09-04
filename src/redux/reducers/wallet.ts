@@ -1,5 +1,6 @@
 import { AnyAction } from 'redux';
-import { WALLET_DATA, EXPENSES_DATA } from '../actions';
+import { WALLET_DATA, EXPENSES_DATA, DELETE_EXPENSE } from '../actions';
+import { RenderExpenses } from '../../type';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -26,6 +27,12 @@ function wallet(state = INITIAL_STATE, action: AnyAction) {
             exchangeRates: action.payload.data,
           },
         ],
+      };
+
+    case DELETE_EXPENSE:
+      return {
+        ...state,
+        expenses: state.expenses.filter((id: RenderExpenses) => id.id !== action.payload),
       };
     default:
       return state;
