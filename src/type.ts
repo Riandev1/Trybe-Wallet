@@ -1,7 +1,7 @@
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from 'redux';
 
-export type ExpensesData = {
+export type Expense = {
   ask: string;
   bid: string;
   code: string;
