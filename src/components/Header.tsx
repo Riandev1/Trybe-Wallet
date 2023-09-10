@@ -4,6 +4,7 @@ import { ReduxState } from '../type';
 function Header() {
   const { user, wallet } = useSelector((state: ReduxState) => state);
   const { expenses } = wallet;
+  console.log(expenses);
 
   const totalExpenses: number = expenses.reduce((acc, cur) => (
     Number(cur.exchangeRates[cur.currency].ask * cur.value) + acc
