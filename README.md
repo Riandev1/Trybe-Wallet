@@ -1,34 +1,44 @@
-💼 Projeto Wallet
-Neste projeto, eu criei o Trybe Wallet, uma carteira de controle de gastos com conversor de moedas. Ao utilizar essa aplicação, a pessoa usuária deverá ser capaz de:
+# 💼 Projeto Wallet  
 
-📝 Adicionar, remover e editar um gasto.
-📊 Visualizar sua tabela de gastos.
-💱 Visualizar o total de gastos convertidos para uma moeda de sua escolha.
-Além disso, neste projeto, foi verificado minha capacidade de:
-🔄 Criar um store Redux em aplicações React.
-🔄 Criar reducers no Redux em aplicações React.
-🔄 Criar actions no Redux em aplicações React.
-🔄 Criar dispatchers no Redux em aplicações React.
-🎣 Usar os hooks do Redux para manipulação e leitura do estado global.
-🌐 Criar actions assíncronas na aplicação React que faz uso do Redux.
-Para garantir a qualidade do código, utilizei neste projeto os linters ESLint e StyleLint. Assim, o código se manteve alinhado com as boas práticas de desenvolvimento, além de ser mais legível e de fácil manutenção.
+Este projeto é uma carteira de controle de gastos com conversor de moedas. Ao utilizar essa aplicação, o usuário poderá:  
 
-Requisitos
- Criar uma página inicial de login com validação dos campos.
- Na página principal, criar um header para as informações da carteira do usuário
- Desenvolver um formulário para adicionar uma despesa contendo características como moeda, método de pagamento, descrição...
- Criar uma tabela com os gastos cadastrados pelo usuário
- Implementar a a funcionalidade de deletar uma despesa
- Implementar a funcionalidade de editar uma despesa
- Desenvolver testes que cobrem até 90% das linhas de código (como os testes foram feitos antes da estilização, a cobertura atual pode não atingir os 90%).
-Além disso, toda a aplicação foi posteriormente estilizada garantindo um layout moderno e responsivo ao usuário.
+✅ Adicionar, remover e editar um gasto.  
+✅ Visualizar sua tabela de gastos.  
+✅ Visualizar o total de gastos convertidos para uma moeda de sua escolha.  
 
-O que já veio pronto da Trybe
-Neste projeto, utilizei o Cypress para garantir o funcionamento dos requisitos e dos testes criados e requisitados pela Trybe.
-As funções de renderWithRouter e similares já vieram prontas, cabendo a mim apenas usá-las.
-Por fim, um objeto contendo um retorno simulado da API foi disponibilizado para poder ser usado nos testes.
-📬 Entre em contato comigo
-Em caso de dúvidas ou para entrar em contato, você pode me encontrar em:
+## 🚀 Tecnologias e Habilidades  
 
-✉️ Email: devriancontato@gmail.com
-🔗 Linkedin: (https://www.linkedin.com/in/rian-dev/)
+Durante o desenvolvimento deste projeto, exercitei minha capacidade de:  
+
+🔄 Criar um store Redux em aplicações React.  
+🔄 Criar reducers no Redux em aplicações React.  
+🔄 Criar actions no Redux em aplicações React.  
+🔄 Criar dispatchers no Redux em aplicações React.  
+🎣 Usar os hooks do Redux para manipulação e leitura do estado global.  
+🌐 Criar actions assíncronas na aplicação React que faz uso do Redux.  
+
+Para garantir a qualidade do código, utilizei os linters **ESLint** e **StyleLint**, assegurando boas práticas de desenvolvimento e um código mais legível e de fácil manutenção.  
+
+## 📌 Requisitos Implementados  
+
+- [x] Criar uma página inicial de login com validação dos campos.  
+- [x] Criar um **header** para as informações da carteira do usuário.  
+- [x] Desenvolver um **formulário** para adicionar uma despesa com moeda, método de pagamento e descrição.  
+- [x] Criar uma **tabela** para exibir os gastos cadastrados.  
+- [x] Implementar a funcionalidade de **deletar** uma despesa.  
+- [x] Implementar a funcionalidade de **editar** uma despesa.  
+- [x] Desenvolver **testes** com cobertura de até **90% do código**.  
+- [x] Estilizar a aplicação, garantindo um **layout moderno e responsivo**.  
+
+## 🛠 O que já veio pronto da Trybe  
+
+- Utilização do **Cypress** para garantir o funcionamento dos requisitos e dos testes.  
+- Algumas funções auxiliares, como `renderWithRouter`, já foram fornecidas.  
+- Um objeto contendo um **retorno simulado da API** foi disponibilizado para ser utilizado nos testes.  
+
+## 📬 Entre em Contato  
+
+Em caso de dúvidas ou oportunidades, você pode me encontrar em:  
+
+✉️ **Email:** [devriancontato@gmail.com](mailto:devriancontato@gmail.com)  
+🔗 **LinkedIn:** [linkedin.com/in/rian-dev](https://www.linkedin.com/in/rian-dev/)  
